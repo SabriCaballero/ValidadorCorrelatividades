@@ -23,6 +23,11 @@ public class Materia {
         this.idMateria = idMateria;
     }
 
+    public Materia(String nombreMateria, List<Materia> correlativas) {
+        this.nombreMateria = nombreMateria;
+        this.correlativas = correlativas;
+    }
+
     public Materia(String idMateria) {
         this.idMateria = idMateria;
     }
@@ -82,7 +87,7 @@ public class Materia {
         return materias;
     }
 
-    public boolean puedeCursar(Alumno alumno, Materia materia) {
+    public static boolean puedeCursar(Alumno alumno, Materia materia) {
         boolean puedeCursar = true;
         if (materia.getCorrelativas() != null && alumno.getMateriasAprobadas() != null) {
             for (Materia correlativa : materia.getCorrelativas()) {
@@ -91,6 +96,8 @@ public class Materia {
                     break;
                 }
             }
+        } else if(alumno.getMateriasAprobadas() == null && materia.getCorrelativas()!= null) {
+            puedeCursar = false;
         }
         return puedeCursar;
     }
