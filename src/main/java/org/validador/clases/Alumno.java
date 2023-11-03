@@ -34,45 +34,14 @@ public class Alumno {
         this.materiasAprobadas = materiasAprobadas;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public String getIdAlumno() {
         return idAlumno;
-    }
-
-    public void setIdAlumno(String idAlumno) {
-        this.idAlumno = idAlumno;
     }
 
     public List<Materia> getMateriasAprobadas() {
         return materiasAprobadas;
     }
 
-    public void setMateriasAprobadas(List<Materia> materiasAprobadas) {
-        this.materiasAprobadas = materiasAprobadas;
-    }
-
-    public void agregarMateriaAprobada(Materia codigoMateria) {
-        materiasAprobadas.add(codigoMateria);
-    }
-
-    public void eliminarMateriaAprobada(Materia codigoMateria) {
-        materiasAprobadas.remove(codigoMateria);
-    }
     public static Alumno buscarAlumno(String id, List<Alumno> alumnos) {
         Alumno existeAlumno = null;
         for (Alumno alumno : alumnos) {

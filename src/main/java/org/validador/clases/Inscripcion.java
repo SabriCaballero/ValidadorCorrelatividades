@@ -16,23 +16,12 @@ public class Inscripcion {
         this.materia = materia;
     }
 
-    public Inscripcion() {
-    }
-
     public Alumno getAlumno() {
         return alumno;
     }
 
-    public void setAlumno(Alumno alumno) {
-        this.alumno = alumno;
-    }
-
     public Materia getMateria() {
         return materia;
-    }
-
-    public void setMateria(Materia materia) {
-        this.materia = materia;
     }
 
     public boolean aprobada() {
