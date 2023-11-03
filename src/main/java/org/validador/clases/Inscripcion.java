@@ -36,7 +36,7 @@ public class Inscripcion {
     }
 
     public boolean aprobada() {
-        return materia.puedeCursar(getAlumno(), getMateria());
+        return Materia.puedeCursar(getAlumno(), getMateria());
     }
 
     public static List<Inscripcion> cargarInscripcionesDesdeArchivo(String filePath, List<Alumno> alumnos, List<Materia> materias) {

@@ -29,6 +29,11 @@ public class Alumno {
         this.materiasAprobadas = materiasAprobadas;
     }
 
+    public Alumno(String idAlumno, List<Materia> materiasAprobadas) {
+        this.idAlumno = idAlumno;
+        this.materiasAprobadas = materiasAprobadas;
+    }
+
     public String getNombre() {
         return nombre;
     }
